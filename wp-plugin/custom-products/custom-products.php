@@ -13,8 +13,8 @@ function custom_products_menu()
         'manage_options',
         'custom-products',
         'custom_products_page',
-        'dashicons-cart', // Иконка меню (можно заменить на другую)
-        26 // Позиция меню (после "Posts")
+        'dashicons-cart',
+        26
     );
 }
 add_action('admin_menu', 'custom_products_menu');
