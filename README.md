@@ -57,7 +57,7 @@
 7. Для настройки проекта смотрите [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Демо проекта
-Фронтэед часть https://dmitriyshaydurov.github.io/route-4-me-test/
-Бэкэнд часть https://shaydurov.space/
-админка https://shaydurov.space/admin (dmitriy/dmitriy@27)
+1. Фронтенд часть https://dmitriyshaydurov.github.io/route-4-me-test/
+2. Бэкенд часть https://shaydurov.space/
+3. Aдминка https://shaydurov.space/admin (dmitriy/dmitriy@27)
 
