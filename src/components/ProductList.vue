@@ -23,14 +23,12 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      products: [
-        { id: 1, title: 'Товар 1', price: 100 },
-        { id: 2, title: 'Товар 2', price: 200 },
-        { id: 3, title: 'Товар 3', price: 300 },
-      ],
+      products: [],
       cartItems: this.getStoredCartItems(),
     };
   },
@@ -53,6 +51,15 @@ export default {
       const storedCartItems = localStorage.getItem('cartItems');
       return storedCartItems ? JSON.parse(storedCartItems) : [];
     },
+  },
+  created() {
+    axios.get('http://starexan.beget.tech/wp-json/custom-products/v1/products')
+      .then(response => {
+        this.products = response.data.map((product, index) => ({...product, id: index + 1}));
+      })
+      .catch(error => {
+        console.error(error);
+      });
   },
 };
 </script>

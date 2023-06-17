@@ -29,6 +29,8 @@ module.exports = {
       ],
     },
   },
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/route-4-me-test/'
+    : '/',
 };
 
